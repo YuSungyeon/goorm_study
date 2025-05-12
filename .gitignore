@@ -1,0 +1,23 @@
+# macOS 시스템 파일
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# 아이콘 파일
+Icon?
+
+# .Spotlight 검색 인덱싱
+.Spotlight-V100
+
+# .Trashes (휴지통 관련)
+.Trashes
+
+# 네트워크 파일 시스템 정보
+*.swp
+._*
+
+# macOS 메타데이터 백업
+*.DocumentRevisions-V100
+*.TemporaryItems
+*.fseventsd
+*.VolumeIcon.icns
