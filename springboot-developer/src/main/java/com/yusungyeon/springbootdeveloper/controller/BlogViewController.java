@@ -36,4 +36,17 @@ public class BlogViewController {
 
         return "article";
     }
+
+    @GetMapping("/new-article")
+    // id 키를 가진 퀴리 파라미터의 값을 id 변수에 매핑
+    public String newArticle(@RequestParam(required = false) Long id, Model model) {
+        if (id == null) { // id 값 없으면 생성
+            model.addAttribute("article", new ArticleViewResponse());
+        } else { //있으면 수정
+            Article article = blogService.findById(id);
+            model.addAttribute("article", new ArticleViewResponse(article));
+        }
+
+        return "newArticle";
+    }
 }
